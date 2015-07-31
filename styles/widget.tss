@@ -1,0 +1,22 @@
+"#slideTabButtonBar": {
+	left: '0dp',
+	right: '0dp',
+	height: '80dp'
+},
+"#slideBar": {
+	bottom : '0dp',
+	width : Ti.UI.FILL,
+	height : '10%'
+},
+"#buttonArea": {
+	width : Ti.UI.FILL,
+	height : '90%',
+	top : '0dp',
+	left : '0dp',
+	layout : 'horizontal'
+},
+"#viewSlideFocus": {
+	backgroundColor : 'green',
+	height : Ti.UI.FILL,
+	left : '0dp'
+}

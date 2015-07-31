@@ -1,0 +1,8 @@
+<Alloy>
+	<View id="slideTabButtonBar">
+		<View id="buttonArea"></View>
+		<View id="slideBar">
+			<View id="viewSlideFocus"></View>
+		</View>
+	</View>
+</Alloy>
