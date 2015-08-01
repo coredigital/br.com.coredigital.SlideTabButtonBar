@@ -25,7 +25,6 @@
 		view.height = Ti.UI.FILL;
 		view.index = index;
 		if (hasOpacityEffect == true) { 
-			console.info(" vamos colocar o efeito!!" );
 			if (view.index == 0) {
 				view.opacity = 1;
 			} else {
