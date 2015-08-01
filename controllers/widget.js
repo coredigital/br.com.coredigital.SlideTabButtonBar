@@ -1,6 +1,10 @@
 (function constructor(args){
 	var currentIndex = 0;
 	//$.slideTabButtonBar = _.extend($.slideTabButtonBar, args);
+	
+	// refactory it: this is need to be a property of widget
+	var hasOpacityEffect = true;
+
 	//refactory it
 	$.slideTabButtonBar.backgroundColor = args.backgroundColor;
 	$.slideTabButtonBar.height = args.height;
@@ -11,7 +15,6 @@
 		$.slideBar.height = args.slideBarheight;
 	}
 
-
 	$.buttonArea.removeAllChildren();
 	var buttonWidth = OS_ANDROID ? Math.round(px2dpi(Ti.Platform.displayCaps.platformWidth) / args.children.length) :  Math.round(Ti.Platform.displayCaps.platformWidth / args.children.length);
 	_.each(args.children, function(view, index){
@@ -21,9 +24,20 @@
 		$.viewSlideFocus.width = ((100) / args.children.length) + '%';
 		view.height = Ti.UI.FILL;
 		view.index = index;
-
+		if (hasOpacityEffect == true) { 
+			console.info(" vamos colocar o efeito!!" );
+			if (view.index == 0) {
+				view.opacity = 1;
+			} else {
+				view.opacity = 0.5;
+			}
+		}
 		view.addEventListener('click', function(e) {
 			if (currentIndex != view.index) {
+				if (hasOpacityEffect == true) {
+					args.children[currentIndex].opacity = 0.5;
+					view.opacity = 1;
+				}
 				var animateBar = Ti.UI.createAnimation({
 					left : view.index * buttonWidth,
 					duration : 350
