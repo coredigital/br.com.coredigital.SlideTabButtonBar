@@ -5,6 +5,8 @@ SlideTabButtonBar widget for Appcelerator Titanium
 ## Overview
 This widget is pretty TabbedBar to iOS and Android. 
 
+![screenshot](https://raw.github.com/coredigital/br.com.coredigital.SlideTabButtonBar/master/docs/screenshot.png)
+
 ## Use it
 
 * Add the widget to your *Alloy Code*:
