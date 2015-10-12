@@ -8,6 +8,7 @@
 	//refactory it
 	$.slideTabButtonBar.backgroundColor = args.backgroundColor;
 	$.slideTabButtonBar.height = args.height;
+	$.slideTabButtonBar.top = args.top;
 	$.slideBar.backgroundColor = args.slideBarColor;
 	$.viewSlideFocus.backgroundColor = args.selectItemColor;
 
