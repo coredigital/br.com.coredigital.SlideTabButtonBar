@@ -70,5 +70,9 @@
 	function dpi2px(dpi) {
 	    return Math.ceil(dpi * (Titanium.Platform.displayCaps.dpi / 160));
 	};
+
+	exports.getIndex = function () {
+		return currentIndex;
+	};
 })(arguments[0] || {});
 
